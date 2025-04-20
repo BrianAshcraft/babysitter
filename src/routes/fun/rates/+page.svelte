@@ -64,7 +64,7 @@
     </div>
     
     <div class="text-center mt-12">
-      <a href="/contact" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full hover:from-purple-600 hover:to-pink-600 transform hover:scale-110 transition duration-300 font-bold text-xl shadow-lg">Book Your Playdate!</a>
+      <a href="/fun/contact" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full hover:from-purple-600 hover:to-pink-600 transform hover:scale-110 transition duration-300 font-bold text-xl shadow-lg">Book Your Playdate!</a>
     </div>
   </div>
 </section>

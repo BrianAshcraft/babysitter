@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let data: { success?: boolean };
+  export let data: { success?: boolean; googleFormSuccess?: boolean };
 </script>
 
 <section class="py-12 px-4">
@@ -42,6 +42,9 @@
           <div class="bg-green-100 border-2 border-green-400 text-green-700 px-6 py-4 rounded-xl mb-6 shadow-inner text-center">
             <p class="text-xl font-bold">🎉 Yay! Message Sent! 🎉</p>
             <p class="mt-2">Thank you for your message! Miss Elmira will get back to you super soon with playhouse magic!</p>
+            {#if data?.googleFormSuccess === false}
+              <p class="mt-2 text-yellow-600">Note: Your message was received, but there was an issue saving it to our records. Miss Elmira will still see your message!</p>
+            {/if}
           </div>
         {/if}
         
