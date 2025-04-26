@@ -82,11 +82,29 @@
 		}
 	];
 
-	// Auto-scroll testimonials
+	// For Calendly integration
+	let calendlyLoaded = false;
+
+	// Load Calendly script
+	function loadCalendlyScript() {
+		if (typeof window !== 'undefined' && !calendlyLoaded) {
+			const script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.src = 'https://assets.calendly.com/assets/external/widget.js';
+			script.async = true;
+			document.body.appendChild(script);
+			calendlyLoaded = true;
+		}
+	}
+
+	// Auto-scroll testimonials and load Calendly
 	onMount(() => {
 		testimonialInterval = setInterval(() => {
 			currentTestimonial = (currentTestimonial + 1) % testimonials.length;
 		}, 5000);
+
+		// Load Calendly script
+		loadCalendlyScript();
 
 		return () => {
 			clearInterval(testimonialInterval);
@@ -375,103 +393,18 @@
 		</div>
 	</div>
 
-	<!-- Availability Section - Calendar View -->
+	<!-- Availability Section - Calendly Integration -->
 	<div class="bg-[#faf9f7] px-6 py-20">
 		<div class="mx-auto max-w-4xl">
-			<h2 class="mb-16 text-center font-serif text-3xl text-[#2c3e50] md:text-4xl">
+			<h2 class="mb-8 text-center font-serif text-3xl text-[#2c3e50] md:text-4xl">
 				My Availability
 			</h2>
+			<p class="mb-10 text-center text-lg text-[#5d6d7e]">
+				Book a meet & greet or schedule childcare services directly using my online calendar.
+			</p>
 
-			<div class="overflow-hidden rounded-lg bg-white shadow-md">
-				<!-- Calendar header -->
-				<div class="flex items-center justify-between bg-[#3a6186] p-4 text-white">
-					<button class="rounded p-1 hover:bg-[#2c5178]" aria-label="Previous month">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-5 w-5"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M15 19l-7-7 7-7"
-							/>
-						</svg>
-					</button>
-					<h3 class="text-lg font-medium">April 2025</h3>
-					<button class="rounded p-1 hover:bg-[#2c5178]" aria-label="Next month">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-5 w-5"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M9 5l7 7-7 7"
-							/>
-						</svg>
-					</button>
-				</div>
-
-				<!-- Calendar grid -->
-				<div class="p-4">
-					<!-- Days of week -->
-					<div class="mb-2 grid grid-cols-7">
-						{#each ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] as day}
-							<div class="py-2 text-center text-sm font-medium text-[#5d6d7e]">{day}</div>
-						{/each}
-					</div>
-
-					<!-- Calendar days (simplified example) -->
-					<div class="grid grid-cols-7 gap-1">
-						<!-- Previous month days (greyed out) -->
-						{#each Array(6) as _}
-							<div class="p-2 text-center text-gray-400"></div>
-						{/each}
-
-						<!-- Current month days -->
-						{#each Array(30) as _, i}
-							<div
-								class="relative cursor-pointer rounded-full p-2 text-center transition-colors duration-200
-								{i === 25 ? 'bg-[#3a6186] text-white' : 'hover:bg-[#f0e6da]'}
-								{[4, 5, 11, 12, 18, 19, 25, 26].includes(i) ? 'font-medium text-[#3a6186]' : ''}"
-							>
-								{i + 1}
-								{#if [4, 11, 18, 25].includes(i)}
-									<span
-										class="absolute bottom-0 left-1/2 h-1 w-1 -translate-x-1/2 transform rounded-full bg-[#89253e]"
-									></span>
-								{/if}
-							</div>
-						{/each}
-					</div>
-				</div>
-
-				<!-- Calendar footer -->
-				<div class="flex items-center justify-between border-t border-[#e5e7eb] bg-[#f8f4ef] p-4">
-					<div class="flex items-center space-x-4">
-						<div class="flex items-center">
-							<span class="mr-2 h-3 w-3 rounded-full bg-[#3a6186]"></span>
-							<span class="text-sm text-[#5d6d7e]">Available</span>
-						</div>
-						<div class="flex items-center">
-							<span class="mr-2 h-3 w-3 rounded-full bg-[#89253e]"></span>
-							<span class="text-sm text-[#5d6d7e]">Special Rate</span>
-						</div>
-					</div>
-
-					<a href="#contact" class="text-sm font-medium text-[#3a6186] hover:underline"
-						>Request a Spot</a
-					>
-				</div>
-			</div>
+			<!-- Calendly inline widget with full-width styling -->
+			<div class="calendly-inline-widget w-full" data-url="https://calendly.com/evolsquirrel/30min" style="height:900px;"></div>
 		</div>
 	</div>
 
