@@ -113,40 +113,48 @@
 </script>
 
 <section class="min-h-screen bg-[#faf9f7] font-sans text-gray-800">
-	<!-- Hero Section - Fullscreen Split Design -->
+	<!-- Hero Section - Mobile-First Design -->
 	<div class="flex min-h-[90vh] w-full flex-col md:flex-row">
-		<!-- Left side - Portrait -->
-		<div class="relative w-full overflow-hidden bg-[#f0e6da] md:w-1/2">
+		<!-- Mobile-optimized hero image (visible only on small screens) -->
+		<div class="block md:hidden w-full bg-[#f0e6da] relative">
+			<div class="pt-[75%] relative"> <!-- 4:3 aspect ratio container -->
+				<img
+					src="/images/elmira-hero.png"
+					alt="Elmira - Professional Babysitter"
+					class="absolute inset-0 h-full w-full object-cover object-top"
+				/>
+				<!-- Mobile overlay text -->
+				<div class="absolute inset-0 flex items-end bg-gradient-to-t from-[#2c3e50]/80 to-transparent p-6">
+					<h2 class="font-serif text-2xl font-bold text-white">Elmira Vasquez</h2>
+				</div>
+			</div>
+		</div>
+
+		<!-- Desktop-only portrait (hidden on mobile) -->
+		<div class="hidden md:block relative w-1/2 overflow-hidden bg-[#f0e6da]">
 			<!-- Overlay for image -->
 			<div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#f0e6da]/20"></div>
-
 			<!-- Hero image with proper sizing and positioning -->
 			<img
 				src="/images/elmira-hero.png"
 				alt="Elmira - Professional Babysitter"
-				class="absolute inset-0 h-full w-full object-cover object-center md:object-[75%_center]"
+				class="absolute inset-0 h-full w-full object-cover object-[75%_center]"
 			/>
-
-			<!-- Mobile overlay text (visible only on small screens) -->
-			<div
-				class="absolute inset-0 flex items-end bg-gradient-to-t from-[#2c3e50]/80 to-transparent p-6 md:hidden"
-			>
-				<h2 class="font-serif text-2xl font-bold text-white">Elmira's Playhouse</h2>
-			</div>
 		</div>
 
 		<!-- Right side - Content -->
-		<div class="flex w-full items-center justify-center bg-[#f8f4ef] p-8 md:w-1/2 md:p-16">
+		<div class="flex w-full items-center justify-center bg-[#f8f4ef] p-6 pt-8 md:w-1/2 md:p-16">
 			<div class="mx-auto max-w-lg">
-				<h1 class="mb-4 font-serif text-4xl leading-tight font-bold text-[#2c3e50] md:text-5xl">
+				<h1 class="mb-4 font-serif text-3xl leading-tight font-bold text-[#2c3e50] md:text-5xl">
 					Care That Grows With Your Family
 				</h1>
-				<p class="mb-8 text-lg text-[#5d6d7e] md:text-xl">
-					Trusted babysitting for ages 6 months to 5 years.
+				<p class="mb-6 md:mb-8 text-base md:text-xl text-[#5d6d7e]">
+					Trusted babysitting for ages 6 months to 5 years. CPR certified with 5+ years of
+					experience.
 				</p>
 				<a
-					href="#contact"
-					class="inline-block transform rounded-md bg-gradient-to-r from-[#3a6186] to-[#89253e] px-8 py-3 font-medium text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+					href="#availability"
+					class="inline-block transform rounded-md bg-gradient-to-r from-[#3a6186] to-[#89253e] px-5 py-2 md:px-6 md:py-3 text-sm md:text-base font-medium text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
 				>
 					Book a Meet & Greet
 				</a>
@@ -155,9 +163,9 @@
 	</div>
 
 	<!-- About Section - Story-Driven Timeline -->
-	<div class="bg-white px-6 py-20">
+	<div class="bg-white px-4 md:px-6 py-12 md:py-20">
 		<div class="mx-auto max-w-5xl">
-			<h2 class="mb-16 text-center font-serif text-3xl text-[#2c3e50] md:text-4xl">My Journey</h2>
+			<h2 class="mb-10 md:mb-16 text-center font-serif text-2xl md:text-4xl text-[#2c3e50]">My Journey</h2>
 
 			<div class="relative">
 				<!-- Timeline line -->
@@ -207,9 +215,9 @@
 	</div>
 
 	<!-- Service Section - Interactive Cards -->
-	<div class="bg-[#faf9f7] px-6 py-20">
+	<div class="bg-[#faf9f7] px-4 md:px-6 py-12 md:py-20">
 		<div class="mx-auto max-w-6xl">
-			<h2 class="mb-12 text-center font-serif text-3xl text-[#2c3e50] md:text-4xl">Services</h2>
+			<h2 class="mb-8 md:mb-12 text-center font-serif text-2xl md:text-4xl text-[#2c3e50]">Services</h2>
 
 			<!-- First row of services (3 cards) -->
 			<div class="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -394,17 +402,17 @@
 	</div>
 
 	<!-- Availability Section - Calendly Integration -->
-	<div class="bg-[#faf9f7] px-6 py-20">
+	<div id="availability" class="bg-[#faf9f7] px-4 md:px-6 py-12 md:py-20">
 		<div class="mx-auto max-w-4xl">
-			<h2 class="mb-8 text-center font-serif text-3xl text-[#2c3e50] md:text-4xl">
+			<h2 class="mb-6 md:mb-8 text-center font-serif text-2xl md:text-4xl text-[#2c3e50]">
 				My Availability
 			</h2>
-			<p class="mb-10 text-center text-lg text-[#5d6d7e]">
+			<p class="mb-6 md:mb-10 text-center text-base md:text-lg text-[#5d6d7e]">
 				Book a meet & greet or schedule childcare services directly using my online calendar.
 			</p>
 
 			<!-- Calendly inline widget with full-width styling -->
-			<div class="calendly-inline-widget w-full" data-url="https://calendly.com/evolsquirrel/30min" style="height:900px;"></div>
+			<div class="calendly-inline-widget w-full rounded-lg overflow-hidden" data-url="https://calendly.com/evolsquirrel/30min" style="height:550px; min-height:450px;"></div>
 		</div>
 	</div>
 
