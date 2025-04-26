@@ -112,9 +112,9 @@
 	});
 </script>
 
-<section class="min-h-screen bg-[#faf9f7] font-sans text-gray-800">
+<section class="bg-[#faf9f7] font-sans text-gray-800">
 	<!-- Hero Section - Mobile-First Design -->
-	<div class="flex min-h-[90vh] w-full flex-col md:flex-row">
+	<div class="flex w-full flex-col md:flex-row md:min-h-[90vh]">
 		<!-- Mobile-optimized hero image (visible only on small screens) -->
 		<div class="block md:hidden w-full bg-[#f0e6da] relative">
 			<div class="pt-[75%] relative"> <!-- 4:3 aspect ratio container -->
@@ -143,7 +143,7 @@
 		</div>
 
 		<!-- Right side - Content -->
-		<div class="flex w-full items-center justify-center bg-[#f8f4ef] p-6 pt-8 md:w-1/2 md:p-16">
+		<div class="flex w-full items-center justify-center bg-[#f8f4ef] p-6 pt-8 pb-6 md:w-1/2 md:p-16">
 			<div class="mx-auto max-w-lg">
 				<h1 class="mb-4 font-serif text-3xl leading-tight font-bold text-[#2c3e50] md:text-5xl">
 					Care That Grows With Your Family
@@ -163,7 +163,7 @@
 	</div>
 
 	<!-- About Section - Story-Driven Timeline -->
-	<div class="bg-white px-4 md:px-6 py-12 md:py-20">
+	<div class="bg-white px-4 md:px-6 py-10 md:py-20 -mt-1">
 		<div class="mx-auto max-w-5xl">
 			<h2 class="mb-10 md:mb-16 text-center font-serif text-2xl md:text-4xl text-[#2c3e50]">My Journey</h2>
 
