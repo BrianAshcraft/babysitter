@@ -1,5 +1,8 @@
 <script>
 	import '../../app.css';
+	import MetaTags from '$lib/components/MetaTags.svelte';
+	import { page } from '$app/stores';
+
 	let mobileMenuOpen = false;
 
 	function toggleMobileMenu() {
@@ -9,7 +12,13 @@
 	function closeMobileMenu() {
 		mobileMenuOpen = false;
 	}
+
+	// Get the current route for meta tags
+	$: route = $page.url.pathname;
 </script>
+
+<!-- Fun style-specific meta tags -->
+<MetaTags style="fun" route={route} />
 
 <div class="min-h-screen bg-gradient-to-b from-purple-50 to-pink-50 font-comic-sans">
 	<header class="py-4 px-6 bg-gradient-to-r from-purple-500 via-pink-400 to-yellow-400 shadow-lg">
