@@ -44,7 +44,6 @@
 					<ul class="flex space-x-6">
 						<li><a href="/fun" class="nav-link bg-yellow-400">Home</a></li>
 						<li><a href="/fun/about" class="nav-link bg-pink-400">About Me</a></li>
-						<li><a href="/fun/services" class="nav-link bg-green-400">Fun Activities</a></li>
 						<li><a href="/fun/rates" class="nav-link bg-blue-400">Playtime Rates</a></li>
 						<li><a href="/fun/contact" class="nav-link bg-purple-400">Say Hello!</a></li>
 					</ul>
@@ -58,7 +57,6 @@
 				<ul class="mobile-nav-list">
 					<li><a href="/fun" class="mobile-nav-link bg-yellow-400" on:click={closeMobileMenu}>Home</a></li>
 					<li><a href="/fun/about" class="mobile-nav-link bg-pink-400" on:click={closeMobileMenu}>About Me</a></li>
-					<li><a href="/fun/services" class="mobile-nav-link bg-green-400" on:click={closeMobileMenu}>Fun Activities</a></li>
 					<li><a href="/fun/rates" class="mobile-nav-link bg-blue-400" on:click={closeMobileMenu}>Playtime Rates</a></li>
 					<li><a href="/fun/contact" class="mobile-nav-link bg-purple-400" on:click={closeMobileMenu}>Say Hello!</a></li>
 				</ul>
@@ -75,8 +73,6 @@
 			<p class="text-lg">© 2025 Elmira's Playhouse - Where Fun Never Ends!</p>
 			<div class="mt-4 flex justify-center space-x-4">
 				<a href="/fun/contact" class="text-yellow-300 hover:text-yellow-100">Contact</a>
-				<span class="text-purple-300">|</span>
-				<a href="/fun/services" class="text-yellow-300 hover:text-yellow-100">Activities</a>
 				<span class="text-purple-300">|</span>
 				<a href="/fun/rates" class="text-yellow-300 hover:text-yellow-100">Rates</a>
 			</div>

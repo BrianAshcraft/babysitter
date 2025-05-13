@@ -53,7 +53,6 @@
 		<p class="subtitle">Where imagination comes to life and fun never ends!</p>
 		<div class="button-container">
 			<a href="/fun/about" class="fun-button meet-button">Meet Elmira</a>
-			<a href="/fun/services" class="fun-button play-button">Play Activities</a>
 		</div>
 	</div>
 </section>
@@ -77,7 +76,50 @@
 		</div>
 	</div>
 
-	<div class="cta-section fade-in" class:visible={isVisible} style="transition-delay: 0.4s;">
+	<div class="activities-section fade-in" class:visible={isVisible} style="transition-delay: 0.3s;">
+		<h2 class="section-title activities-title">Magical Playhouse Activities!</h2>
+		<p class="section-subtitle">Every day is an adventure at Elmira's Playhouse!</p>
+
+		<div class="activities-grid">
+			<div class="activity-card yellow-card">
+				<div class="activity-icon">🎨</div>
+				<h3 class="activity-title">Creative Art Studio</h3>
+				<p class="activity-text">Finger painting, collages, clay modeling, and more! We'll create masterpieces while developing fine motor skills and expressing ourselves!</p>
+			</div>
+			
+			<div class="activity-card blue-card">
+				<div class="activity-icon">📚</div>
+				<h3 class="activity-title">Storytime Magic</h3>
+				<p class="activity-text">Interactive storytelling with funny voices, puppets, and props! We'll journey through magical worlds and spark imagination!</p>
+			</div>
+			
+			<div class="activity-card green-card">
+				<div class="activity-icon">🌿</div>
+				<h3 class="activity-title">Nature Explorers</h3>
+				<p class="activity-text">Outdoor adventures, scavenger hunts, and nature crafts! We'll discover the wonders of the natural world together!</p>
+			</div>
+
+			<div class="activity-card pink-card">
+				<div class="activity-icon">🎵</div>
+				<h3 class="activity-title">Music & Movement</h3>
+				<p class="activity-text">Dance parties, musical games, and sing-alongs! We'll shake, wiggle, and groove while developing coordination and rhythm!</p>
+			</div>
+			
+			<div class="activity-card purple-card">
+				<div class="activity-icon">🧩</div>
+				<h3 class="activity-title">Brain Boosters</h3>
+				<p class="activity-text">Fun puzzles, games, and activities that strengthen problem-solving skills and critical thinking while having a blast!</p>
+			</div>
+			
+			<div class="activity-card red-card">
+				<div class="activity-icon">🍎</div>
+				<h3 class="activity-title">Snack Adventures</h3>
+				<p class="activity-text">Creating fun, healthy snacks together! We'll learn about nutrition while making delicious treats that fuel our playtime!</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="cta-section fade-in" class:visible={isVisible} style="transition-delay: 0.5s;">
 		<h2 class="cta-title">Come Play With Us!</h2>
 		<div class="cta-button-container">
 			<a href="/fun/contact" class="book-button">Book Your Playdate!</a>
@@ -233,11 +275,6 @@
 		color: #4c1d95;
 	}
 
-	.play-button {
-		background-color: #34d399;
-		color: #4c1d95;
-	}
-
 	.content-section {
 		max-width: 1000px;
 		margin: 0 auto;
@@ -329,6 +366,125 @@
 		line-height: 1.6;
 		color: #6d28d9;
 		text-align: center;
+	}
+
+	/* Activities Section Styles */
+	.activities-section {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin-bottom: 0.5rem;
+		color: #7c3aed;
+		position: relative;
+		display: inline-block;
+	}
+
+	.activities-title {
+		color: #7c3aed;
+	}
+
+	.section-title::after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80px;
+		height: 3px;
+		background: linear-gradient(90deg, #d946ef, #8b5cf6);
+		border-radius: 3px;
+	}
+
+	.section-subtitle {
+		font-size: 1.2rem;
+		color: #be185d;
+		margin-bottom: 2.5rem;
+		margin-top: 1.5rem;
+	}
+
+	.activities-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+
+	@media (min-width: 640px) {
+		.activities-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.activities-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	.activity-card {
+		padding: 1.5rem;
+		border-radius: 15px;
+		transition: all 0.3s ease;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	}
+
+	.activity-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+	}
+
+	.yellow-card {
+		background-color: #fff8e1;
+		border: 2px solid #ffd54f;
+	}
+
+	.blue-card {
+		background-color: #e3f2fd;
+		border: 2px solid #90caf9;
+	}
+
+	.green-card {
+		background-color: #e8f5e9;
+		border: 2px solid #a5d6a7;
+	}
+
+	.pink-card {
+		background-color: #fce4ec;
+		border: 2px solid #f48fb1;
+	}
+
+	.purple-card {
+		background-color: #f3e5f5;
+		border: 2px solid #ce93d8;
+	}
+
+	.red-card {
+		background-color: #ffebee;
+		border: 2px solid #ef9a9a;
+	}
+
+	.activity-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.activity-title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #6d28d9;
+		margin-bottom: 0.75rem;
+	}
+
+	.activity-text {
+		font-size: 1rem;
+		line-height: 1.5;
+		color: #4b5563;
 	}
 
 	.cta-section {
