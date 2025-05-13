@@ -24,39 +24,6 @@
 		</div>
 	</section>
 
-	<section class="activities-section fade-in" class:visible={isVisible}>
-		<div class="activities-container">
-			<div class="activities-header">
-				<h2>Magical Playhouse Activities!</h2>
-				<p class="activities-subtitle">Every day is an adventure at Elmira's Playhouse!</p>
-			</div>
-			
-			<div class="activities-grid">
-				<div class="activity-card bg-yellow">
-					<div class="activity-icon">🎨</div>
-					<h3>Creative Art Studio</h3>
-					<p>Finger painting, collages, clay modeling, and more! We'll create masterpieces while developing fine motor skills and expressing ourselves!</p>
-				</div>
-				
-				<div class="activity-card bg-blue">
-					<div class="activity-icon">📚</div>
-					<h3>Storytime Magic</h3>
-					<p>Interactive storytelling with funny voices, puppets, and props! We'll journey through magical worlds and spark imagination!</p>
-				</div>
-				
-				<div class="activity-card bg-green">
-					<div class="activity-icon">🌿</div>
-					<h3>Nature Explorers</h3>
-					<p>Outdoor adventures, scavenger hunts, and nature crafts! We'll discover the wonders of the natural world together!</p>
-				</div>
-			</div>
-
-			<div class="learn-more-container">
-				<a href="/fun" class="learn-more-btn">Learn More About Elmira's Playhouse</a>
-			</div>
-		</div>
-	</section>
-
 	<p class="attribution">
 		<a
 			href="https://www.flaticon.com/free-icons/mother"
