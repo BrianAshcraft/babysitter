@@ -29,7 +29,7 @@
 			href="https://www.flaticon.com/free-icons/mother"
 			class="text-xs"
 			target="_blank"
-			title="mother icons">(favicon Mother icons created by Freepik - Flaticon)</a
+			title="mother icons">(favicon Mother icon created by Freepik - Flaticon)</a
 		>
 	</p>
 </main>
@@ -106,7 +106,12 @@
 		margin: 2rem auto;
 		padding: 2rem 1rem;
 		border-radius: 20px;
-		background: linear-gradient(135deg, rgba(255, 156, 215, 0.15) 0%, rgba(179, 136, 255, 0.15) 50%, rgba(142, 209, 252, 0.15) 100%);
+		background: linear-gradient(
+			135deg,
+			rgba(255, 156, 215, 0.15) 0%,
+			rgba(179, 136, 255, 0.15) 50%,
+			rgba(142, 209, 252, 0.15) 100%
+		);
 		box-shadow: 0 10px 25px rgba(124, 58, 237, 0.2);
 	}
 
